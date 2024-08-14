@@ -1,0 +1,17 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Total Hours</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of employees" [ngStyle]="{'background-color': employee.totalHours < 100 ? '#ffdddd' : 'transparent'}">
+      <td>{{ employee.name }}</td>
+      <td>{{ employee.totalHours }}</td>
+    </tr>
+  </tbody>
+</table>
+<div *ngIf="error" class="error-message">
+  {{ error }}
+</div>
